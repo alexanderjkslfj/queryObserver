@@ -1,7 +1,7 @@
 # queryObserver
 Tiny Javascript library to easily create an observer watching for new elements matching a css selector.
 
-Its intended use is for userscripts. If a site you write a script for dynamically adds elements it can be tempting to simply use a timeout to select the dynamically added elements. This library offers a non-invasive method to listen for dynamically added elements using a MutationObserver.
+Its intended use is for userscripts. If a site you write a script for dynamically adds elements it can be tempting to simply use a timeout to select the dynamically added elements. This library offers non-invasive methods to listen for dynamically added elements using a MutationObserver.
 
 ## Usage
 ```javascript
