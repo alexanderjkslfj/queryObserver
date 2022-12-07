@@ -1,6 +1,8 @@
 # queryObserver
 Tiny Javascript library to easily create an observer watching for new elements matching a css selector.
 
+Its intended use is for userscripts. If a site you write a script for dynamically adds elements it can be tempting to simply use a timeout to select the dynamically added elements. This library offers a non-invasive method to listen for dynamically added elements using a MutationObserver.
+
 ## Usage
 ```javascript
 import { queryObserverAll } from "./queryObserver.js"
@@ -65,6 +67,8 @@ document.body.firstChild.appendChild("div")
 ## Documentation
 **queryObserver**
 
+This method executes the given callback for the first element found which matches the given css selector.
+
 | Parameter | Type                        | Description                                                           | Default       |
 | :---      | :---                        | :---                                                                  | :---          |
 | selector  | string                      | The observer searches for an element matching this css selector.      | -             |
@@ -76,6 +80,8 @@ Returns a method. When this method is called, the observer is disconnected and n
 (The observer automatically disconnects when it finds the node searched for.)
 
 **queryObserverAll**
+
+This method executes the given callback for each (current and future) element matching the given css selector.
 
 | Parameter | Type                        | Description                                                           | Default       |
 | :---      | :---                        | :---                                                                  | :---          |
