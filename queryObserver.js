@@ -1,7 +1,7 @@
 /**
  * Applies a given callback to all current and future elements matching the css selector.
  * @param {string} selector The observer searches for elements matching this css selector.
- * @param {(node: HTMLElement) => any} callback This callback is called for each matching element that is found. (Callback is not awaited.)
+ * @param {(node: HTMLElement) => any} callback This callback is called for each matching element found. (Callback is not awaited.)
  * @param {boolean} current Whether to check already existing elements too (or only future ones).
  * @param {Node} parent Node whose children are observed. Defaults to the document body.
  * @returns {() => void} Method to disconnect the observer.
