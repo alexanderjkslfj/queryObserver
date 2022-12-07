@@ -6,7 +6,7 @@
  * @param {Node} parent Node whose children are observed. Defaults to the document body.
  * @returns {() => void} Method to disconnect the observer.
  */
-function queryObserverAll(query, callback, current = true, parent = document.body) {
+export function queryObserverAll(query, callback, current = true, parent = document.body) {
     if (current) {
         const nodes = document.querySelectorAll(query)
         for (const node of nodes)
@@ -44,7 +44,7 @@ function queryObserverAll(query, callback, current = true, parent = document.bod
  * @param {Node} parent Node whose children are observed. Defaults to the document body.
  * @returns {() => void} Method to disconnect the observer. (Automatically disconnects once the element is found.)
  */
-function queryObserver(query, callback, current = true, parent = document.body) {
+export function queryObserver(query, callback, current = true, parent = document.body) {
     if (current) {
         const node = document.querySelector(query)
         if (node) {
