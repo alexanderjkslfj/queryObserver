@@ -69,12 +69,12 @@ document.body.firstChild.appendChild("div")
 
 This method executes the given callback for the first element found which matches the given css selector.
 
-| Parameter | Type                        | Description                                                           | Default       |
-| :---      | :---                        | :---                                                                  | :---          |
-| selector  | string                      | The observer searches for an element matching this css selector.      | -             |
-| callback  | (node: HTMLElement) => any  | This callback is called when a matching element is found.             | -             |
-| current   | boolean                     | Whether to check already existing elements too (or only future ones). | true          |
-| parent    | Node                        | Node whose children are observed.                                     | document.body |
+| Parameter | Type                              | Description                                                           | Default             |
+| :---      | :---                              | :---                                                                  | :---                |
+| selector  | ```string```                      | The observer searches for an element matching this css selector.      | -                   |
+| callback  | ```(node: HTMLElement) => any```  | This callback is called when a matching element is found.             | -                   |
+| current   | ```boolean```                     | Whether to check already existing elements too (or only future ones). | ```true```          |
+| parent    | ```Node```                        | Node whose children are observed.                                     | ```document.body``` |
 
 Returns a method. When this method is called, the observer is disconnected and no longer operates.
 (The observer automatically disconnects when it finds the node searched for.)
@@ -83,11 +83,11 @@ Returns a method. When this method is called, the observer is disconnected and n
 
 This method executes the given callback for each (current and future) element matching the given css selector.
 
-| Parameter | Type                        | Description                                                           | Default       |
-| :---      | :---                        | :---                                                                  | :---          |
-| selector  | string                      | The observer searches for elements matching this css selector.        | -             |
-| callback  | (node: HTMLElement) => any  | This callback is called for each matching element found.              | -             |
-| current   | boolean                     | Whether to check already existing elements too (or only future ones). | true          |
-| parent    | Node                        | Node whose children are observed.                                     | document.body |
+| Parameter | Type                              | Description                                                           | Default             |
+| :---      | :---                              | :---                                                                  | :---                |
+| selector  | ```string```                      | The observer searches for elements matching this css selector.        | -                   |
+| callback  | ```(node: HTMLElement) => any```  | This callback is called for each matching element found.              | -                   |
+| current   | ```boolean```                     | Whether to check already existing elements too (or only future ones). | ```true```          |
+| parent    | ```Node```                        | Node whose children are observed.                                     | ```document.body``` |
 
 Returns a method. When this method is called, the observer is disconnected and no longer operates.
