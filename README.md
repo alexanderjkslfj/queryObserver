@@ -46,8 +46,8 @@ document.body.appendChild(document.createElement("div"))
 import { queryObserver } from "./queryObserver.js"
 
 // Will not be passed to the callback
-document.body.appendChild("div")
-document.body.firstChild.appendChild("div")
+document.body.appendChild(document.createElement("div"))
+document.body.firstChild.appendChild(document.createElement("div"))
 
 // Will execute the callback for the first future (not current) div added to the body's first child.
 queryObserver("div", () => {
@@ -55,13 +55,13 @@ queryObserver("div", () => {
 }, false, document.body.firstChild)
 
 // Will not be passed to the callback
-document.body.appendChild("div")
+document.body.appendChild(document.createElement("div"))
 
 // Will be passed to the callback
-document.body.firstChild.appendChild("div")
+document.body.firstChild.appendChild(document.createElement("div"))
 
 // Will not be passed to the callback
-document.body.firstChild.appendChild("div")
+document.body.firstChild.appendChild(document.createElement("div"))
 ```
 
 ## Documentation
